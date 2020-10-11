@@ -8,27 +8,36 @@
 export default {
   name: 'Proverb',
   props: {
-    proverb: String,
+    proverb: String
   }
 };
 </script>
 
 <style>
 .proverb-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #000;
+  padding: 2rem;
+  width: 100%;
 }
 
 .proverb-text {
   font-family: Apple Chancery, cursive;
-  color: #fff;
-  font-size: 3rem;
+  color: #ffffff;
+  font-size: var(--text-size);
+  text-align: center;
   animation: fadeIn ease 5s;
 }
 
 @keyframes fadeIn {
-  0% { opacity:0; }
-  100% { opacity:1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 </style>

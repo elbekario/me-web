@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Proverb v-if="preloading" class="app-preloading" :proverb="proverb" />
-    <Header />
-    <Main name="Hello" class="main" />
-    <Footer />
+    <Header class="app-header" />
+    <Main name="Hello" class="app-main" />
+    <Footer class="app-footer" />
   </div>
 </template>
 
@@ -20,21 +20,25 @@ export default {
     Proverb,
     Header,
     Main,
-    Footer,
+    Footer
   },
   created() {
-    fire.database().ref('/proverbs').once('value').then(snapshot => {
-      const proverbs = snapshot.val();
-      this.proverb = proverbs[Math.floor(Math.random() * proverbs.length)]
-      setTimeout(() => this.finishPreloading(), 5000);
-    });
+    fire
+      .database()
+      .ref('/proverbs')
+      .once('value')
+      .then((snapshot) => {
+        const proverbs = snapshot.val();
+        this.proverb = proverbs[Math.floor(Math.random() * proverbs.length)];
+        setTimeout(() => this.finishPreloading(), 5000);
+      });
   },
   data() {
-		return {
+    return {
       preloading: true,
-      proverb: ""
-		};
-	},
+      proverb: ''
+    };
+  },
   methods: {
     finishPreloading: function () {
       this.preloading = false;
@@ -50,7 +54,12 @@ export default {
   flex-direction: column;
 }
 
-.main {
+.app-header,
+.app-footer {
+  z-index: 100;
+}
+
+.app-main {
   padding-top: 3rem;
 }
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 html {
@@ -9,4 +10,26 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --text-size: 2rem;
+  --max-width: 935px;
+}
+
+@media screen and (min-width: 425px) {
+  :root {
+    --text-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --text-size: 3rem;
+  }
 }
