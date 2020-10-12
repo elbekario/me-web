@@ -1,5 +1,5 @@
 <template>
-  <header>header</header>
+  <header>el_bekario</header>
 </template>
 
 <script>
@@ -14,10 +14,12 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  height: 3rem;
+  padding: 0.5rem;
   position: fixed;
   width: 100%;
-  background-color: blue;
+  background-color: #000000;
+  font-family: Apple Chancery, cursive;
+  color: #ffffff;
+  font-size: 2rem;
 }
 </style>

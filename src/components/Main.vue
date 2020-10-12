@@ -1,5 +1,30 @@
 <template>
   <main>
+    <section>
+      <a
+        href="https://blog.kairosds.com/author/francisco-alvarez/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="main-card-wrapper"
+      >
+        <div class="ebk-card">
+          <img
+            src="https://www.redeszone.net/app/uploads-redeszone.net/2019/05/crear-blog-alternativas.jpg"
+            class="main-card-img"
+            alt="header image of blog card"
+          />
+          <div class="main-card-content">
+            Mis posts en<a
+              href="https://www.kairosds.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ebk-remarkable main-card-link"
+              >KairósDS</a
+            >
+          </div>
+        </div>
+      </a>
+    </section>
     <section>eslogan / image</section>
     <section>cv</section>
     <section>
@@ -29,22 +54,25 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
   position: relative;
+  text-align: justify;
+  margin-top: 4rem;
 }
 
-main::before {
+/* main::before {
   content: ' ';
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url('../assets/javier-alvarez.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   opacity: 0.5;
   filter: grayscale(100%);
-}
+} */
 
 section {
   min-height: 10rem;
@@ -55,5 +83,29 @@ section {
   justify-content: center;
   z-index: 1;
   max-width: var(--max-width);
+  margin: auto;
+}
+
+.main-card-wrapper {
+  display: contents;
+  width: 100%;
+}
+
+.main-card-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 2.5rem;
+}
+
+.main-card-link {
+  margin-left: 0.3rem;
 }
 </style>

@@ -22,6 +22,35 @@ a {
   --max-width: 935px;
 }
 
+.ebk-card {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  will-change: box-shadow, transform;
+}
+
+.ebk-card:hover {
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2%);
+}
+
+.ebk-card:hover img {
+  transform: scale(1.1);
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+.ebk-remarkable {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
 @media screen and (min-width: 425px) {
   :root {
     --text-size: 2.5rem;
@@ -31,5 +60,8 @@ a {
 @media screen and (min-width: 768px) {
   :root {
     --text-size: 3rem;
+  }
+  .ebk-card {
+    max-width: 50%;
   }
 }
